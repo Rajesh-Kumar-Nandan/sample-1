@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Topic / Subpage Content Layout
+   ========================================================================== */
+main.topic {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  padding: 3.5rem 4rem;
+  max-width: 960px;
+  color: var(--text-main);
+}
+
+/* Headings */
+main.topic h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--surface-border);
+}
+
+main.topic h1:first-of-type {
+  margin-top: 0;
+}
+
+main.topic h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+main.topic h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+main.topic h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs & Text */
+main.topic p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+main.topic p b {
+  color: var(--text-main);
+}
+
+main.topic a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+main.topic a:hover {
+  color: var(--accent-hover);
+}
+
+/* Bullet Lists & Tag Badges */
+ul.topic {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0 2rem 0;
+  padding: 0;
+}
+
+/* Renders tools and apps as clean badges */
+ul.topic li {
+  background-color: var(--surface-color);
+  border: 1px solid var(--surface-border);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  line-height: 1.4;
+}
+
+/* When ul.topic contains detailed bullet points (e.g. Roles & Responsibilities on resume) */
+main.topic h4 + ul.topic {
+  display: block;
+  list-style: disc inside;
+  margin-left: 0.5rem;
+}
+
+main.topic h4 + ul.topic li {
+  background: none;
+  border: none;
+  padding: 0.25rem 0;
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* Responsive adjustment for content */
+@media (max-width: 768px) {
+  main.topic {
+    margin-left: 0;
+    padding: 2rem 1.25rem;
+  }
+
+  main.topic h1 {
+    font-size: 1.85rem;
+  }
+}

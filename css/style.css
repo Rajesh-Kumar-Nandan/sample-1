@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+:root {
+  --bg-color: #0f172a;
+  --surface-color: #1e293b;
+  --surface-border: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #0284c7;
+  --sidebar-width: 240px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Fixed Left Navigation (Header)
+   ========================================================================== */
+header,
+header.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: #0b1120;
+  border-right: 1px solid var(--surface-border);
+  padding: 2.5rem 1.5rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.menu li a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu li a:hover {
+  color: var(--text-main);
+  background-color: var(--surface-color);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Right-Side Main Layout (Hero on Index)
+   ========================================================================== */
+main.main {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.profile {
+  background-color: var(--surface-color);
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image-container {
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.profile-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.profile-bio {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 1.25rem;
+  border: 1px solid var(--surface-border);
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Action Buttons */
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 768px) {
+  header,
+  header.header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--surface-border);
+    padding: 1rem;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .menu li a {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  main.main {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  .profile {
+    padding: 2rem 1.5rem;
+  }
+}
