@@ -6,10 +6,23 @@
     <title>About Me</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/topicstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Header / Navigation -->
     <header class="header">
+        <form action="search.html" method="GET" class="site-search-form">
+            <input 
+                type="text" 
+                name="q" 
+                placeholder="Search site..." 
+                required 
+                autocomplete="off"
+            >
+            <button type="submit" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
         <div>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>

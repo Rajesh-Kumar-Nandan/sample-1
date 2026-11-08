@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <!-- Font Awesome for search icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topicstyle.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <form action="search.html" method="GET" class="site-search-form">
+            <input 
+                type="text" 
+                name="q" 
+                id="search-input-field" 
+                placeholder="Search site..." 
+                required 
+                autocomplete="off"
+            >
+            <button type="submit" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>            
+                <li><a href="portfolio.html">Portfolio</a></li>            
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Search Results Content Area -->
+    <main class="topic">
+        <h1>Search Results</h1>
+        <p id="search-status">Searching content across all pages...</p>
+        <div id="results-list" class="results-container"></div>
+    </main>
+
+    <script src="js/site-search.js"></script>
+</body>
+</html>
